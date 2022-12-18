@@ -504,7 +504,7 @@ nginx_process_disabled() {
 }
 
 acme_cron_update() {
-    wget -N -P /usr/bin --no-check-certificate "https://raw.githubusercontent.com/etion2008/x-ui/ssl_update.sh"
+    wget -N -P /usr/bin --no-check-certificate "https://github.com/etion2008/x-ui/raw/main/ssl_update.sh"
     if [[ $(crontab -l | grep -c "ssl_update.sh") -lt 1 ]]; then
       if [[ "${ID}" == "centos" ]]; then
           #        sed -i "/acme.sh/c 0 3 * * 0 \"/root/.acme.sh\"/acme.sh --cron --home \"/root/.acme.sh\" \
