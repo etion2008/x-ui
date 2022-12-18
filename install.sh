@@ -369,18 +369,7 @@ domain_check() {
         echo -e "${OK} ${GreenBG} 域名dns解析IP 与 本机IP 匹配 ${Font}"
         sleep 2
     else
-        echo -e "${Error} ${RedBG} 请确保域名添加了正确的 A 记录，否则将无法正常使用 V2ray ${Font}"
-        echo -e "${Error} ${RedBG} 域名dns解析IP 与 本机IP 不匹配 是否继续安装？（y/n）${Font}" && read -r install
-        case $install in
-        [yY][eE][sS] | [yY])
-            echo -e "${GreenBG} 继续安装 ${Font}"
-            sleep 2
-            ;;
-        *)
-            echo -e "${RedBG} 安装终止 ${Font}"
-            exit 2
-            ;;
-        esac
+        echo -e "${Error} ${RedBG} 域名dns解析IP 与 本机IP 不匹配 ${Font}"
     fi
 }
 
