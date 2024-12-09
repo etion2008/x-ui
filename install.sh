@@ -350,7 +350,7 @@ ssl_install() {
     if [[ "${ID}" == "centos" ]]; then
         ${INS} install socat nc -y
     else
-        ${INS} install socat netcat -y
+        ${INS} install socat netcat-traditional -y
     fi
     judge "安装 SSL 证书生成脚本依赖"
 
